@@ -13,6 +13,17 @@
         Copyright (c) {{ current_year }}
         <br/><br/><br/><br/>
         {{ now }}
+
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-9 text-center">
+              {% if user.is_authenticated %}
+              <h1>Welcome, {{ user.username }}</h1>
+              {% else %}
+              <h1>Please, Login for more.</h1>
+              {% endif %}
+              <h2>Travelling was never that easy</h2>
+            </div>
+          </div>
     </center>
 
 {% endblock %}
